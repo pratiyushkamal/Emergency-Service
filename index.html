@@ -792,7 +792,8 @@
 
         @keyframes spin {
             0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
         }
 
         .no-results-message {
@@ -1161,11 +1162,11 @@
                 </div>
                 <nav aria-label="Main navigation">
                     <ul>
-                        <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+                        <li><a href="#home" class="active" aria-current="page">Home</a></li>
                         <li><a href="#categories">Services</a></li>
                         <li><a href="#emergency-numbers">Emergency Numbers</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact-footer">Contact</a></li>
                     </ul>
                 </nav>
             </div>
@@ -1336,7 +1337,7 @@
                     <h2>About Global EmergencyFinder</h2>
                     <p>Global EmergencyFinder is a non-profit initiative dedicated to providing immediate and reliable access to critical emergency services around the globe. In moments of crisis, every second counts, and our mission is to ensure that anyone, anywhere, can quickly locate the help they need.</p>
                     <p>We leverage robust public data sources, primarily **Google Places API**, to compile our directory. This data is regularly updated by Google and its community. While we strive for accuracy, the real-time availability of specific services (e.g., specific pharmacy opening hours, shelter bed availability) can vary and should always be verified by contacting the service directly.</p>
-                    <p>If you represent an emergency service and would like to be listed or update your information, please <a href="contact.html" style="color: var(--primary); font-weight: 600;">contact us</a>.</p>
+                    <p>If you represent an emergency service and would like to be listed or update your information, please <a href="#contact-footer" style="color: var(--primary); font-weight: 600;">contact us</a>.</p>
                 </div>
             </div>
         </section>
@@ -1357,11 +1358,11 @@
                 <div class="footer-column">
                     <h3>Quick Links</h3>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="index.html#categories">Service Categories</a></li>
-                        <li><a href="index.html#emergency-numbers">Emergency Numbers</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#categories">Service Categories</a></li>
+                        <li><a href="#emergency-numbers">Emergency Numbers</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact-footer">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
@@ -1383,7 +1384,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>© 2025 Global EmergencyFinder. All rights reserved. | <a href="privacy.html" style="color: var(--gray);">Privacy Policy</a> | <a href="terms.html" style="color: var(--gray);">Terms of Service</a></p>
+                <p>© 2025 Global EmergencyFinder. All rights reserved. | <a href="#privacy-policy">Privacy Policy</a> | <a href="#terms-of-service">Terms of Service</a></p>
             </div>
         </div>
     </footer>
@@ -1413,6 +1414,83 @@
             </div>
         </div>
     </div>
+
+    <section class="content-page" id="privacy-policy" style="padding-top: 6rem;">
+        <h2 style="text-align: center; margin-bottom: 2.5rem; font-family: 'Poppins', sans-serif; color: var(--primary); font-size: 2.5rem; font-weight: 700;">Privacy Policy</h2>
+        <p>At Global EmergencyFinder, your privacy is paramount. This policy outlines how we collect, use, and protect your information when you use our service.</p>
+
+        <h3 style="color: var(--dark); font-family: 'Poppins', sans-serif; font-size: 1.8rem; margin-top: 2rem; margin-bottom: 1rem; border-bottom: 1px solid var(--gray); padding-bottom: 0.5rem;">Information We Collect</h3>
+        <p>We collect very limited information, primarily to provide and improve our service:</p>
+        <ul>
+            <li>**Location Data:** When you use "Near Me" or the "SOS" button, we request access to your device's geolocation. This data is used in real-time to find nearby emergency services and determine your local emergency number. **We do not store your precise location data on our servers.** It's processed client-side (in your browser) and immediately discarded after the search/action is completed.</li>
+            <li>**Non-Personal Usage Data:** We may collect anonymous, aggregated data about how the website is used (e.g., popular search categories, browser types). This helps us understand user behavior and improve the user experience. This data cannot be used to identify you personally.</li>
+            <li>**Google AdSense:** As our service is free, we utilize Google AdSense for monetization. Google AdSense may collect data to serve relevant ads, in accordance with Google's own privacy policy.</li>
+        </ul>
+
+        <h3 style="color: var(--dark); font-family: 'Poppins', sans-serif; font-size: 1.8rem; margin-top: 2rem; margin-bottom: 1rem; border-bottom: 1px solid var(--gray); padding-bottom: 0.5rem;">How We Use Your Information</h3>
+        <p>Your information is used solely for the following purposes:</p>
+        <ul>
+            <li>To provide accurate and localized emergency service search results.</li>
+            <li>To enable the "Emergency SOS" feature by initiating calls and directions based on your detected location.</li>
+            <li>To improve and optimize the performance and usability of the Global EmergencyFinder website.</li>
+            <li>To display relevant advertisements through Google AdSense.</li>
+        </ul>
+
+        <h3 style="color: var(--dark); font-family: 'Poppins', sans-serif; font-size: 1.8rem; margin-top: 2rem; margin-bottom: 1rem; border-bottom: 1px solid var(--gray); padding-bottom: 0.5rem;">Data Sharing and Disclosure</h3>
+        <p>We do not sell, trade, or otherwise transfer your personally identifiable information to outside parties. We may share non-personally identifiable, aggregated demographic information with our partners and advertisers for the purposes outlined above.</p>
+        <p>We may also disclose your information when we believe release is appropriate to comply with the law, enforce our site policies, or protect ours or others' rights, property, or safety.</p>
+
+        <h3 style="color: var(--dark); font-family: 'Poppins', sans-serif; font-size: 1.8rem; margin-top: 2rem; margin-bottom: 1rem; border-bottom: 1px solid var(--gray); padding-bottom: 0.5rem;">Third-Party Links</h3>
+        <p>Our website contains links to third-party websites (e.g., official government emergency sites, WHO, IFRC, Google Maps). These third-party sites have separate and independent privacy policies. We therefore have no responsibility or liability for the content and activities of these linked sites.</p>
+
+        <h3 style="color: var(--dark); font-family: 'Poppins', sans-serif; font-size: 1.8rem; margin-top: 2rem; margin-bottom: 1rem; border-bottom: 1px solid var(--gray); padding-bottom: 0.5rem;">Your Consent</h3>
+        <p>By using our site, you consent to our privacy policy.</p>
+
+        <h3 style="color: var(--dark); font-family: 'Poppins', sans-serif; font-size: 1.8rem; margin-top: 2rem; margin-bottom: 1rem; border-bottom: 1px solid var(--gray); padding-bottom: 0.5rem;">Changes to Our Privacy Policy</h3>
+        <p>If we decide to change our privacy policy, we will post those changes on this page. This policy was last modified on July 11, 2025.</p>
+
+        <h3 style="color: var(--dark); font-family: 'Poppins', sans-serif; font-size: 1.8rem; margin-top: 2rem; margin-bottom: 1rem; border-bottom: 1px solid var(--gray); padding-bottom: 0.5rem;">Contacting Us</h3>
+        <p>If you have any questions regarding this privacy policy, you may contact us using the information provided on our <a href="#contact-footer">Contact Us</a> page.</p>
+    </section>
+
+    <section class="content-page" id="terms-of-service" style="padding-top: 6rem;">
+        <h2 style="text-align: center; margin-bottom: 2.5rem; font-family: 'Poppins', sans-serif; color: var(--primary); font-size: 2.5rem; font-weight: 700;">Terms of Service</h2>
+        <p>Welcome to Global EmergencyFinder! By accessing or using our website, you agree to comply with and be bound by the following terms and conditions of use. Please review these terms carefully.</p>
+
+        <h3 style="color: var(--dark); font-family: 'Poppins', sans-serif; font-size: 1.8rem; margin-top: 2rem; margin-bottom: 1rem; border-bottom: 1px solid var(--gray); padding-bottom: 0.5rem;">1. Acceptance of Terms</h3>
+        <p>By using the Global EmergencyFinder website, you agree to these Terms of Service. If you do not agree to these terms, you should not use this website.</p>
+
+        <h3 style="color: var(--dark); font-family: 'Poppins', sans-serif; font-size: 1.8rem; margin-top: 2rem; margin-bottom: 1rem; border-bottom: 1px solid var(--gray); padding-bottom: 0.5rem;">2. Service Description</h3>
+        <p>Global EmergencyFinder is a free online directory service designed to help users locate emergency and essential services (such as hospitals, police, fire, pharmacies, etc.) globally. All information provided is sourced from public data (e.g., OpenStreetMap) and is intended for informational purposes only. While we strive for accuracy, we cannot guarantee the completeness, reliability, or timeliness of all information.</p>
+
+        <h3 style="color: var(--dark); font-family: 'Poppins', sans-serif; font-size: 1.8rem; margin-top: 2rem; margin-bottom: 1rem; border-bottom: 1px solid var(--gray); padding-bottom: 0.5rem;">3. Disclaimer of Emergency Use</h3>
+        <p><strong>GLOBAL EMERGENCYFINDER IS NOT A SUBSTITUTE FOR DIRECTLY DIALING YOUR LOCAL EMERGENCY SERVICES. IN ANY LIFE-THREATENING SITUATION, ALWAYS DIAL YOUR COUNTRY'S OFFICIAL EMERGENCY NUMBER IMMEDIATELY.</strong></p>
+        <p>The functionality to initiate calls or provide directions is offered for convenience and relies on your device's capabilities and network connectivity, which we cannot guarantee. We are not responsible for any delays, errors, or failures in contacting emergency services through this platform.</p>
+
+        <h3 style="color: var(--dark); font-family: 'Poppins', sans-serif; font-size: 1.8rem; margin-top: 2rem; margin-bottom: 1rem; border-bottom: 1px solid var(--gray); padding-bottom: 0.5rem;">4. User Responsibilities</h3>
+        <ul>
+            <li>You agree to use this service responsibly and for its intended purpose.</li>
+            <li>You acknowledge that all location-based features require your explicit consent to access your device's location.</li>
+            <li>You understand that information provided is derived from third-party sources and should be verified independently when critical.</li>
+            <li>You agree not to use the service for any unlawful or prohibited activities.</li>
+        </ul>
+
+        <h3 style="color: var(--dark); font-family: 'Poppins', sans-serif; font-size: 1.8rem; margin-top: 2rem; margin-bottom: 1rem; border-bottom: 1px solid var(--gray); padding-bottom: 0.5rem;">5. Intellectual Property</h3>
+        <p>All content on this website, including text, graphics, logos, and images, is the property of Global EmergencyFinder or its content suppliers and protected by international copyright laws.</p>
+
+        <h3 style="color: var(--dark); font-family: 'Poppins', sans-serif; font-size: 1.8rem; margin-top: 2rem; margin-bottom: 1rem; border-bottom: 1px solid var(--gray); padding-bottom: 0.5rem;">6. Limitation of Liability</h3>
+        <p>Global EmergencyFinder shall not be liable for any direct, indirect, incidental, special, consequential, or exemplary damages, including but not limited to, damages for loss of profits, goodwill, data, or other intangible losses, resulting from the use or inability to use the service.</p>
+
+        <h3 style="color: var(--dark); font-family: 'Poppins', sans-serif; font-size: 1.8rem; margin-top: 2rem; margin-bottom: 1rem; border-bottom: 1px solid var(--gray); padding-bottom: 0.5rem;">7. Changes to Terms</h3>
+        <p>We reserve the right to modify these Terms of Service at any time. Your continued use of the website after any such changes constitutes your acceptance of the new Terms.</p>
+
+        <h3 style="color: var(--dark); font-family: 'Poppins', sans-serif; font-size: 1.8rem; margin-top: 2rem; margin-bottom: 1rem; border-bottom: 1px solid var(--gray); padding-bottom: 0.5rem;">8. Governing Law</h3>
+        <p>These terms shall be governed by and construed in accordance with the laws of [Your Country/State], without regard to its conflict of law principles.</p>
+
+        <h3 style="color: var(--dark); font-family: 'Poppins', sans-serif; font-size: 1.8rem; margin-top: 2rem; margin-bottom: 1rem; border-bottom: 1px solid var(--gray); padding-bottom: 0.5rem;">9. Contact Information</h3>
+        <p>For any questions regarding these Terms of Service, please contact us via our <a href="#contact-footer">Contact Us</a> page.</p>
+        <p>Last updated: July 11, 2025</p>
+    </section>
 
     <script>
         // --- Configuration (YOUR GOOGLE MAPS PLATFORM API KEY) ---
@@ -1582,7 +1660,7 @@
                 const flagHtml = getFlagHtml(num.country, true);
                 link.innerHTML = `
                     ${flagHtml || `<i class="fas ${num.number === 'Varies' ? 'fa-globe' : 'fa-phone-alt'}"></i>`}
-                    ${num.country === 'Global Crisis Hotline' ? 'Find Crisis Hotline' : `${sanitizeInput(num.country)}: ${sanitizeInput(num.number)}`}
+                    ${sanitizeInput(num.country)}: ${sanitizeInput(num.number === 'Varies' ? 'Find Crisis Hotline' : num.number)}
                 `;
                 link.setAttribute('aria-label', `Call ${num.country} emergency number ${num.number}`);
                 linksContainer.appendChild(link);
@@ -1797,7 +1875,7 @@
                 } else if (error.code === GeolocationPositionError.POSITION_UNAVAILABLE) {
                     errorMessage = "Location information is unavailable. Please try again or enter a location manually.";
                 }
-                displayError(`${errorMessage} Check our <a href="emergency_numbers.html" style="color: var(--primary); font-weight: 600;">Global Emergency Numbers</a> for general help.`);
+                displayError(`${errorMessage} Check our <a href="#emergency-numbers" style="color: var(--primary); font-weight: 600;">Global Emergency Numbers</a> for general help.`);
             }
         }
 
@@ -1810,7 +1888,7 @@
                 resultsListContainer.innerHTML = `
                     <div class="no-results-message">
                         <p>No services found matching your search. Try a different location or service type.</p>
-                        <p>For immediate help, check our <a href="emergency_numbers.html" style="color: var(--primary); font-weight: 600;">Global Emergency Numbers</a> or try our <a href="#categories" style="color: var(--primary); font-weight: 600;">service categories</a>.</p>
+                        <p>For immediate help, check our <a href="#emergency-numbers" style="color: var(--primary); font-weight: 600;">Global Emergency Numbers</a> or try our <a href="#categories" style="color: var(--primary); font-weight: 600;">service categories</a>.</p>
                     </div>
                 `;
                 return;
