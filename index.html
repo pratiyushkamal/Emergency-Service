@@ -1,0 +1,2174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Find local emergency services including hospitals, fire departments, shelters, and crisis hotlines anywhere in the world. Fast, reliable, and accessible.">
+    <meta name="keywords" content="emergency services, global hospitals, fire department, crisis hotline, shelters, emergency directory, pharmacies, veterinary, community support">
+    <meta name="author" content="Global Emergency Services Directory">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Global Emergency Services Finder">
+    <meta property="og:description" content="Quickly locate emergency services like hospitals, fire stations, and crisis hotlines anywhere in the world.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourwebsite.com">
+    <meta property="og:image" content="https://yourwebsite.com/images/og-image.jpg">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <title>Global Emergency Services Finder | Help When You Need It</title>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6066867577696178" crossorigin="anonymous"></script>
+
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary: #e11d48;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --gray: #94a3b8;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+            --info: #0ea5e9; /* Added for info-related elements */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--light);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: var(--light);
+            padding: 1rem 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo i {
+            font-size: 2rem;
+            color: #fff;
+        }
+
+        header h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            color: var(--light);
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover, nav a:focus {
+            background-color: rgba(255, 255, 255, 0.2);
+            text-decoration: none;
+        }
+
+        nav a.active {
+            background-color: var(--secondary);
+        }
+
+        .hero {
+            background: url('https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') no-repeat center center/cover;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            color: white;
+            text-align: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            padding: 2rem;
+        }
+
+        .hero h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+        }
+
+        .emergency-quick-links {
+            background-color: var(--secondary);
+            color: white;
+            padding: 1.5rem 0;
+            margin-bottom: 2rem;
+        }
+
+        .quick-links-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .emergency-link {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background-color: rgba(255, 255, 255, 0.25);
+            padding: 1rem 1.5rem;
+            border-radius: 50px;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .emergency-link:hover {
+            background-color: rgba(255, 255, 255, 0.4);
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .emergency-link .country-flag {
+            height: 1.2em;
+            width: auto;
+            border-radius: 2px;
+            box-shadow: 0 0 2px rgba(0,0,0,0.2);
+        }
+
+        #search-section {
+            padding: 3rem 0;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            margin: -100px auto 3rem;
+            position: relative;
+            z-index: 2;
+            max-width: 1000px;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        #search-section h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-family: 'Poppins', sans-serif;
+            color: var(--primary);
+            font-size: 2.2rem;
+            font-weight: 700;
+        }
+
+        .search-container {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            padding: 0 30px;
+        }
+
+        .search-bar {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            align-items: stretch;
+        }
+
+        #search-input {
+            flex: 1;
+            min-width: 280px;
+            padding: 1rem 1.2rem;
+            font-size: 1.1rem;
+            border: 2px solid var(--gray);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        #search-input:focus {
+            border-color: var(--primary);
+            outline: none;
+            box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.3);
+        }
+
+        #category-filter {
+            min-width: 200px;
+            padding: 1rem 1.2rem;
+            font-size: 1.1rem;
+            border: 2px solid var(--gray);
+            border-radius: 8px;
+            background-color: white;
+            cursor: pointer;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%232563eb'%3E%3Cpath fill-rule='evenodd' d='M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z' clip-rule='evenodd'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            background-size: 1.2em;
+        }
+
+        #category-filter:focus {
+            border-color: var(--primary);
+            outline: none;
+            box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.3);
+        }
+
+        .search-button, .location-button {
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 8px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            flex-shrink: 0;
+        }
+
+        .search-button {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .search-button:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .location-button {
+            background-color: var(--success);
+            color: white;
+        }
+
+        .location-button:hover {
+            background-color: #0ea271;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .button-group {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        #search-results {
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--gray);
+        }
+
+        .results-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary);
+        }
+
+        .results-header h3 {
+            font-family: 'Poppins', sans-serif;
+            color: var(--dark);
+            font-size: 1.5rem;
+        }
+
+        .results-count {
+            color: var(--gray);
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .data-accuracy-note {
+            font-size: 0.95rem;
+            color: var(--gray);
+            text-align: center;
+            margin: 1rem 0 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 10px;
+            background-color: #fffbe6; /* Light yellow background */
+            border-left: 5px solid var(--warning);
+            border-radius: 4px;
+        }
+        .data-accuracy-note i {
+            color: var(--warning);
+        }
+
+
+        .result-item {
+            background-color: white;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+            border-left: 5px solid var(--primary);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .result-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        .result-item h3 {
+            color: var(--primary);
+            margin-bottom: 0.8rem;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.8rem;
+            display: flex; /* For icon alignment */
+            align-items: center;
+        }
+
+        .result-item .service-icon {
+            font-size: 1.5rem; /* Adjust icon size in results */
+            margin-right: 10px;
+            color: var(--primary); /* Default icon color */
+        }
+
+
+        .result-meta {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 1.2rem;
+            flex-wrap: wrap;
+            color: var(--dark);
+            font-size: 0.95rem;
+        }
+
+        .result-meta span {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .result-category {
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: white;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        /* New category colors */
+        .pharmacy { background-color: var(--info); }
+        .veterinary_clinic { background-color: #9333ea; } /* Purple */
+        .community_center { background-color: #d97706; } /* Orange */
+        .fire_station { background-color: var(--danger); } /* Fire Station */
+        .crisis_hotline { background-color: var(--success); } /* Hotline */
+
+
+        /* Existing category colors */
+        .hospital { background-color: var(--primary); }
+        .police { background-color: #6b7280; }
+        .shelter { background-color: var(--warning); }
+
+
+        .result-actions {
+            display: flex;
+            gap: 1.2rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .action-button {
+            padding: 0.7rem 1.4rem;
+            border-radius: 6px;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .call-button {
+            background-color: var(--success);
+            color: white;
+        }
+
+        .call-button:hover {
+            background-color: #0ea271;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+
+        .directions-button {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .directions-button:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+
+        .details-button {
+            background-color: white;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .details-button:hover {
+            background-color: #e0eaff;
+            color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+
+        .service-categories {
+            padding: 4rem 0;
+            background-color: #f0f5ff;
+            border-radius: 8px;
+            box-shadow: inset 0 2px 5px rgba(0,0,0,0.05);
+            margin-top: 3rem;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-family: 'Poppins', sans-serif;
+            color: var(--primary);
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .category-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s ease;
+            border: 1px solid rgba(0,0,0,0.05);
+            cursor: pointer;
+        }
+
+        .category-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .category-image {
+            height: 180px;
+            background-size: cover;
+            background-position: center;
+            filter: brightness(0.9);
+            transition: filter 0.3s ease;
+        }
+
+        .category-card:hover .category-image {
+            filter: brightness(1.05);
+        }
+
+        /* Category specific images */
+        .hospital-image { background-image: url('https://images.unsplash.com/photo-1586769852836-bc0237748459?auto=format&fit=crop&w=800&q=80'); }
+        .fire-image { background-image: url('https://images.unsplash.com/photo-1558507663-efb5f13426e2?auto=format&fit=crop&w=800&q=80'); }
+        .police-image { background-image: url('https://images.unsplash.com/photo-1621379124237-7f9a1f3c3a4d?auto=format&fit=crop&w=800&q=80'); }
+        .shelter-image { background-image: url('https://images.unsplash.com/photo-1520695029094-1a3597d3e6e8?auto=format&fit=crop&w=800&q=80'); }
+        .hotline-image { background-image: url('https://images.unsplash.com/photo-1557053539-7bfb3dfd96d2?auto=format&fit=crop&w=800&q=80'); }
+        /* New category images */
+        .pharmacy-image { background-image: url('https://images.unsplash.com/photo-1594954471089-9a0d89e7f80f?auto=format&fit=crop&w=800&q=80'); }
+        .veterinary-image { background-image: url('https://images.unsplash.com/photo-1543466835-09943482596b?auto=format&fit=crop&w=800&q=80'); }
+        .community-support-image { background-image: url('https://images.unsplash.com/photo-1532629399-cf5273516d61?auto=format&fit=crop&w=800&q=80'); }
+
+
+        .category-content {
+            padding: 1.8rem;
+        }
+
+        .category-content h3 {
+            margin-bottom: 0.8rem;
+            color: var(--dark);
+            font-size: 1.5rem;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .category-content p {
+            color: var(--gray);
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+            min-height: 50px;
+        }
+
+        .category-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--primary);
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: all 0.2s ease;
+        }
+
+        .category-link:hover {
+            text-decoration: underline;
+            color: var(--primary-dark);
+        }
+
+        .ad-container {
+            margin: 2rem 0;
+            text-align: center;
+            background-color: var(--light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            border: 1px dashed var(--gray);
+            color: var(--dark);
+            font-style: italic;
+        }
+
+        .ad-container p {
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+
+        .header-ad, .in-content-ad {
+            max-width: 728px;
+            margin: 2rem auto;
+        }
+
+        .sidebar-ad {
+            max-width: 300px;
+        }
+
+        .about-section {
+            padding: 4rem 0;
+            background-color: #f0f5ff;
+        }
+
+        .about-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about-content h2 {
+            margin-bottom: 2rem;
+            font-family: 'Poppins', sans-serif;
+            color: var(--primary);
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        .about-content p {
+            margin-bottom: 1.8rem;
+            line-height: 1.8;
+            font-size: 1.1rem;
+            color: var(--dark);
+        }
+
+        .global-emergency-numbers {
+            padding: 4rem 0;
+            background-color: white;
+        }
+
+        .emergency-numbers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .emergency-number-card {
+            background-color: var(--light);
+            padding: 1.8rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .emergency-number-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        .emergency-number-card h4 {
+            font-family: 'Poppins', sans-serif;
+            color: var(--primary);
+            margin-bottom: 0.8rem;
+            font-size: 1.4rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .emergency-number-card p {
+            color: var(--dark);
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Flag specific styling for emergency number cards */
+        .emergency-number-card .country-flag {
+            height: 1.4em;
+            width: auto;
+            border-radius: 3px;
+            box-shadow: 0 0 3px rgba(0,0,0,0.3);
+            vertical-align: middle;
+        }
+        .emergency-number-card .country-flag.globe-icon {
+            height: 1.4em;
+            width: 1.4em;
+            font-size: 1.4em;
+            color: var(--primary);
+            box-shadow: none;
+        }
+
+
+        footer {
+            background-color: var(--dark);
+            color: var(--light);
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-column h3 {
+            font-family: 'Poppins', sans-serif;
+            margin-bottom: 1.8rem;
+            color: white;
+            font-size: 1.4rem;
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column li {
+            margin-bottom: 1rem;
+        }
+
+        .footer-column a {
+            color: var(--gray);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .footer-column a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1.2rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.15);
+            border-radius: 50%;
+            color: white;
+            transition: all 0.3s ease;
+            font-size: 1.2rem;
+        }
+
+        .social-links a:hover {
+            background-color: var(--primary);
+            transform: translateY(-4px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+
+        .footer-bottom a {
+            color: var(--gray);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-bottom a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+
+        /* --- Loading States & Empty Results UI --- */
+        .loading-spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid var(--primary);
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+            display: block;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .no-results-message {
+            text-align: center;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            color: var(--dark);
+            margin-top: 1rem;
+        }
+
+        .no-results-message p {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        /* --- Emergency SOS Button --- */
+        #sos-button {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: var(--danger);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 1.1rem;
+            box-shadow: 0 8px 15px rgba(239, 68, 68, 0.4);
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 999;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        #sos-button:hover {
+            background-color: #cc3131;
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 12px 20px rgba(239, 68, 68, 0.6);
+        }
+
+        #sos-button i {
+            font-size: 2.2rem;
+            margin-bottom: 5px;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        /* --- Modal Styles --- */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.7);
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            width: 90%;
+            max-width: 600px;
+            position: relative;
+            animation: fadeIn 0.3s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .close-button {
+            color: var(--gray);
+            font-size: 28px;
+            font-weight: bold;
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .close-button:hover,
+        .close-button:focus {
+            color: var(--dark);
+            text-decoration: none;
+        }
+
+        .modal-content h3 {
+            color: var(--primary-dark);
+            font-family: 'Poppins', sans-serif;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 0.5rem;
+            display: flex; /* For icon alignment */
+            align-items: center;
+        }
+        .modal-content .service-icon {
+            font-size: 1.8rem; /* Adjust icon size in modal header */
+            margin-right: 10px;
+            color: var(--primary-dark); /* Icon color in modal header */
+        }
+
+
+        .modal-meta {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--dark);
+            font-size: 1rem;
+        }
+
+        .modal-meta span {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .modal-meta a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+
+        .modal-meta a:hover {
+            text-decoration: underline;
+        }
+
+        .modal-meta .result-category {
+            align-self: flex-start;
+            margin-bottom: 0.5rem;
+        }
+
+        .modal-photo {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-top: 1rem;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .modal-content p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: var(--dark);
+            margin-bottom: 2rem;
+        }
+
+        .modal-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: flex-start;
+        }
+        .modal-actions .action-button {
+            flex-grow: 1;
+            justify-content: center;
+            padding: 0.8rem 1.5rem;
+        }
+
+
+        /* General Page Styling */
+        .content-page {
+            padding: 6rem 0 4rem;
+            min-height: 60vh;
+        }
+
+        .content-page h2 {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            font-family: 'Poppins', sans-serif;
+            color: var(--primary);
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        .content-page h3 {
+            color: var(--dark);
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.8rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid var(--gray);
+            padding-bottom: 0.5rem;
+        }
+
+        .content-page p, .content-page ul, .content-page ol {
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+            font-size: 1.1rem;
+            color: var(--dark);
+        }
+
+        .content-page ul, .content-page ol {
+            margin-left: 25px;
+        }
+
+        .contact-info {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact-info p {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-info a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 992px) {
+            .hero h2 { font-size: 2.4rem; }
+            .hero p { font-size: 1.1rem; }
+            .section-title, .content-page h2 { font-size: 2.2rem; }
+            .categories-grid, .emergency-numbers-grid { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+            .modal-content { max-width: 500px; padding: 25px; }
+            .modal-content h3 { font-size: 1.8rem; }
+            .content-page { padding: 5rem 0 3rem; }
+        }
+
+        @media (max-width: 768px) {
+            .header-content { flex-direction: column; gap: 1.5rem; }
+            nav ul { flex-wrap: wrap; justify-content: center; gap: 1rem; }
+            nav a { padding: 0.4rem 0.8rem; font-size: 0.95rem; }
+
+            .hero { height: 300px; }
+            .hero h2 { font-size: 2rem; margin-bottom: 0.8rem; }
+            .hero p { font-size: 1rem; margin-bottom: 1.5rem; }
+
+            .emergency-quick-links { padding: 1rem 0; }
+            .quick-links-container { gap: 1rem; }
+            .emergency-link { padding: 0.7rem 1rem; font-size: 0.9rem; gap: 8px; }
+            .emergency-link .country-flag { height: 1em; }
+
+
+            #search-section { padding: 2rem 0; margin: -60px auto 2rem; }
+            #search-section h2 { font-size: 1.8rem; margin-bottom: 1.5rem; }
+            .search-container { padding: 0 20px; gap: 1rem; }
+            .search-bar { flex-direction: column; gap: 0.8rem; }
+            #search-input, #category-filter { width: 100%; min-width: unset; padding: 0.8rem 1rem; font-size: 1rem; }
+            .button-group { width: 100%; flex-direction: column; gap: 0.8rem; }
+            .search-button, .location-button { flex: 1; width: 100%; padding: 0.8rem 1.5rem; font-size: 1rem; }
+
+            .results-header h3 { font-size: 1.3rem; }
+            .results-count { font-size: 0.85rem; }
+
+            .data-accuracy-note { font-size: 0.85rem; }
+
+            .result-item { padding: 1.5rem; margin-bottom: 1rem; }
+            .result-item h3 { font-size: 1.5rem; }
+            .result-item .service-icon { font-size: 1.2rem; }
+            .result-meta { flex-direction: column; gap: 0.5rem; font-size: 0.9rem; }
+            .result-actions { flex-direction: column; gap: 0.8rem; margin-top: 1rem; }
+            .action-button { justify-content: center; width: 100%; padding: 0.6rem 1rem; font-size: 0.9rem; }
+
+            .service-categories, .about-section, .global-emergency-numbers, .content-page { padding: 3rem 0; }
+            .section-title, .content-page h2 { font-size: 2rem; margin-bottom: 2rem; }
+
+            .category-image { height: 160px; }
+            .category-content { padding: 1.2rem; }
+            .category-content h3 { font-size: 1.3rem; }
+            .category-content p { font-size: 0.9rem; margin-bottom: 1rem; }
+            .category-link { font-size: 0.9rem; }
+
+            .footer-content { grid-template-columns: 1fr; text-align: center; }
+            .footer-column h3 { display: block; margin-left: auto; margin-right: auto; }
+            .footer-column ul { padding: 0; }
+            .social-links { justify-content: center; }
+
+            .emergency-number-card h4 { font-size: 1.3rem; }
+            .emergency-number-card .country-flag { height: 1.2em; }
+
+            #sos-button { width: 70px; height: 70px; font-size: 1rem; bottom: 20px; right: 20px; }
+            #sos-button i { font-size: 1.8rem; }
+
+            .modal-content { width: 95%; padding: 20px; }
+            .modal-content h3 { font-size: 1.5rem; }
+            .modal-content .service-icon { font-size: 1.5rem; }
+            .modal-meta { font-size: 0.9rem; }
+            .modal-content p { font-size: 1rem; }
+            .modal-actions { flex-direction: column; gap: 0.8rem; }
+        }
+
+        @media (max-width: 480px) {
+            header h1 { font-size: 1.5rem; }
+            .logo i { font-size: 1.7rem; }
+            nav ul { gap: 0.8rem; }
+            nav a { padding: 0.3rem 0.6rem; font-size: 0.85rem; }
+
+            .hero h2 { font-size: 1.8rem; }
+            .hero p { font-size: 0.9rem; }
+
+            #search-section h2, .section-title, .content-page h2 { font-size: 1.6rem; }
+
+            .emergency-link { padding: 0.6rem 0.9rem; font-size: 0.85rem; gap: 6px; }
+            .emergency-link i { font-size: 1rem; }
+
+            .result-item h3 { font-size: 1.3rem; }
+            .result-item .service-icon { font-size: 1.0rem; }
+            .result-meta span { font-size: 0.8rem; gap: 4px; }
+            .action-button { font-size: 0.85rem; padding: 0.5rem 0.8rem; }
+
+            .category-card { margin: 0 10px; }
+            .category-image { height: 140px; }
+            .category-content { padding: 1.2rem; }
+            .category-content h3 { font-size: 1.1rem; }
+            .category-content p { font-size: 0.85rem; }
+            .category-link { font-size: 0.85rem; }
+
+            .emergency-number-card h4 { font-size: 1.1rem; }
+            .emergency-number-card .country-flag { height: 1em; }
+
+            #sos-button { width: 60px; height: 60px; font-size: 0.9rem; bottom: 15px; right: 15px; }
+            #sos-button i { font-size: 1.5rem; }
+
+            .modal-content { padding: 15px; }
+            .modal-content h3 { font-size: 1.3rem; }
+            .modal-content .service-icon { font-size: 1.3rem; }
+            .modal-meta { font-size: 0.85rem; }
+            .modal-content p { font-size: 0.9rem; }
+            .modal-actions { flex-direction: column; gap: 0.8rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-ambulance"></i>
+                    <h1>Global Emergency<span style="font-weight: 300;">Finder</span></h1>
+                </div>
+                <nav aria-label="Main navigation">
+                    <ul>
+                        <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+                        <li><a href="#categories">Services</a></li>
+                        <li><a href="#emergency-numbers">Emergency Numbers</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-content container">
+            <h2>Find Emergency Help Anywhere</h2>
+            <p>Locate hospitals, fire stations, shelters, and crisis support services near you, anywhere in the world.</p>
+        </div>
+    </section>
+
+    <section class="emergency-quick-links" id="quick-links">
+        <div class="container quick-links-container" id="dynamic-emergency-links">
+            </div>
+    </section>
+
+    <main class="container">
+        <section id="search-section">
+            <h2>Find Emergency Services Near You</h2>
+            <div class="search-container">
+                <div class="search-bar">
+                    <input type="text" id="search-input" placeholder="Enter city, country, or service (e.g., 'hospital in Tokyo')" aria-label="Search emergency services">
+                    <select id="category-filter" aria-label="Filter by service category">
+                        <option value="all">All Services</option>
+                        <option value="hospital">Hospitals</option>
+                        <option value="fire_station">Fire Departments</option>
+                        <option value="police">Police Stations</option>
+                        <option value="pharmacy">Pharmacies</option>
+                        <option value="veterinary_care">Veterinary Clinics</option>
+                        <option value="shelter">Shelters</option>
+                        <option value="crisis_hotline">Crisis Hotlines</option>
+                        <option value="community_center">Community Support</option>
+                    </select>
+                    <div class="button-group">
+                        <button class="search-button" onclick="searchServices()">
+                            <i class="fas fa-search"></i> Search
+                        </button>
+                        <button class="location-button" onclick="getLocation()">
+                            <i class="fas fa-location-arrow"></i> Near Me
+                        </button>
+                    </div>
+                </div>
+
+                <div class="ad-container in-content-ad">
+                    <p>Advertisement</p>
+                    <ins class="adsbygoogle"
+                        style="display:block"
+                        data-ad-client="ca-pub-6066867577696178"
+                        data-ad-slot="1980363673"
+                        data-ad-format="auto"
+                        data-full-width-responsive="true"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+
+                <div id="search-results" aria-live="polite">
+                    <div class="results-header">
+                        <h3>Emergency Services</h3>
+                        <span class="results-count" id="results-count">Enter a location or use 'Near Me' to find services...</span>
+                    </div>
+                    <p class="data-accuracy-note">
+                        <i class="fas fa-info-circle"></i> Information is sourced from Google Places API and may not be real-time. Please verify details directly with the service provider.
+                    </p>
+                    <div id="results-list">
+                        </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="service-categories" id="categories">
+            <h2 class="section-title">Service Categories</h2>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <div class="category-image hospital-image"></div>
+                    <div class="category-content">
+                        <h3>Hospitals & Clinics</h3>
+                        <p>Find emergency rooms, urgent care centers, and medical facilities worldwide.</p>
+                        <a href="#search-section" class="category-link" onclick="filterCategory('hospital')">
+                            View Hospitals <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <div class="category-image fire-image"></div>
+                    <div class="category-content">
+                        <h3>Fire Departments</h3>
+                        <p>Locate fire stations and emergency response teams in your region.</p>
+                        <a href="#search-section" class="category-link" onclick="filterCategory('fire_station')">
+                            View Fire Stations <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <div class="category-image police-image"></div>
+                    <div class="category-content">
+                        <h3>Police Stations</h3>
+                        <p>Find local law enforcement and emergency police services globally.</p>
+                        <a href="#search-section" class="category-link" onclick="filterCategory('police')">
+                            View Police Stations <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <div class="category-image pharmacy-image"></div>
+                    <div class="category-content">
+                        <h3>Pharmacies</h3>
+                        <p>Locate pharmacies and drug stores for medical supplies and prescriptions.</p>
+                        <a href="#search-section" class="category-link" onclick="filterCategory('pharmacy')">
+                            View Pharmacies <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <div class="category-image veterinary-image"></div>
+                    <div class="category-content">
+                        <h3>Veterinary Clinics</h3>
+                        <p>Find animal hospitals and veterinary services for your pets' emergency needs.</p>
+                        <a href="#search-section" class="category-link" onclick="filterCategory('veterinary_care')">
+                            View Vets <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <div class="category-image shelter-image"></div>
+                    <div class="category-content">
+                        <h3>Shelters</h3>
+                        <p>Emergency housing, domestic violence shelters, and homeless services worldwide.</p>
+                        <a href="#search-section" class="category-link" onclick="filterCategory('shelter')">
+                            View Shelters <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <div class="category-image hotline-image"></div>
+                    <div class="category-content">
+                        <h3>Crisis Hotlines</h3>
+                        <p>24/7 support for mental health, suicide prevention, and domestic violence globally.</p>
+                        <a href="#search-section" class="category-link" onclick="filterCategory('crisis_hotline')">
+                            View Hotlines <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <div class="category-image community-support-image"></div>
+                    <div class="category-content">
+                        <h3>Community Support</h3>
+                        <p>Local centers offering aid, food, social services, and community resources.</p>
+                        <a href="#search-section" class="category-link" onclick="filterCategory('community_center')">
+                            View Centers <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="global-emergency-numbers" id="emergency-numbers">
+            <h2 class="section-title">Global Emergency Numbers</h2>
+            <div class="emergency-numbers-grid" id="emergency-numbers-grid">
+                </div>
+        </section>
+
+        <section class="about-section" id="about">
+            <div class="container">
+                <div class="about-content">
+                    <h2>About Global EmergencyFinder</h2>
+                    <p>Global EmergencyFinder is a non-profit initiative dedicated to providing immediate and reliable access to critical emergency services around the globe. In moments of crisis, every second counts, and our mission is to ensure that anyone, anywhere, can quickly locate the help they need.</p>
+                    <p>We leverage robust public data sources, primarily **Google Places API**, to compile our directory. This data is regularly updated by Google and its community. While we strive for accuracy, the real-time availability of specific services (e.g., specific pharmacy opening hours, shelter bed availability) can vary and should always be verified by contacting the service directly.</p>
+                    <p>If you represent an emergency service and would like to be listed or update your information, please <a href="contact.html" style="color: var(--primary); font-weight: 600;">contact us</a>.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Global EmergencyFinder</h3>
+                    <p style="color: var(--gray); margin-bottom: 1rem;">Your trusted resource for locating emergency services worldwide, quickly and reliably.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com" aria-label="Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.twitter.com" aria-label="Twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com" aria-label="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#categories">Service Categories</a></li>
+                        <li><a href="index.html#emergency-numbers">Emergency Numbers</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="https://www.who.int/emergencies" target="_blank">World Health Organization</a></li>
+                        <li><a href="https://www.ifrc.org" target="_blank">International Red Cross</a></li>
+                        <li><a href="https://www.unicef.org/emergencies" target="_blank">UNICEF Emergencies</a></li>
+                        <li><a href="https://www.ready.gov" target="_blank">Emergency Preparedness (USA)</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column" id="contact-footer">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li><a href="mailto:spreadinghappiness@gmail.com"><i class="fas fa-envelope"></i> spreadinghappiness@gmail.com</a></li>
+                        <li><a href="tel:0000000000"><i class="fas fa-phone-alt"></i> 0000000000</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> GHAZIABAD<br>UTTAR PRADESH INDIA 201206</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Global EmergencyFinder. All rights reserved. | <a href="privacy.html" style="color: var(--gray);">Privacy Policy</a> | <a href="terms.html" style="color: var(--gray);">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <button id="sos-button" aria-label="Emergency SOS - Call for Help" onclick="triggerEmergencySOS()">
+        <i class="fas fa-triangle-exclamation"></i>
+        SOS
+    </button>
+
+    <div id="service-details-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal()">×</span>
+            <h3 id="modal-service-name"></h3>
+            <div class="modal-meta">
+                <span id="modal-service-category" class="result-category"></span>
+                <span id="modal-service-location"><i class="fas fa-map-marker-alt"></i></span>
+                <span id="modal-service-phone"><i class="fas fa-phone-alt"></i></span>
+                <span id="modal-service-hours"><i class="far fa-clock"></i></span>
+                <span id="modal-service-website" style="display:none;"><i class="fas fa-globe"></i> <a href="#" target="_blank">Website</a></span>
+                <span id="modal-service-photo" style="display:none;"><img src="" alt="Service Photo" class="modal-photo"></span>
+            </div>
+            <p id="modal-service-description"></p>
+            <div class="modal-actions">
+                <a id="modal-call-button" href="#" class="action-button call-button"><i class="fas fa-phone-alt"></i> Call</a>
+                <a id="modal-directions-button" href="#" target="_blank" class="action-button directions-button"><i class="fas fa-directions"></i> Get Directions</a>
+                <a id="modal-hotline-link" href="#" target="_blank" class="action-button details-button" style="display:none;"><i class="fas fa-info-circle"></i> Learn More</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // --- Configuration (YOUR GOOGLE MAPS PLATFORM API KEY) ---
+        const Maps_API_KEY = "AIzaSyCmazSL_l8ubYn9atMI2ynpnYu6Ewh4XUY"; // Updated Google Maps API Key
+        // --- END Configuration ---
+
+        // Mapping of country names to ISO 3166-1 alpha-2 codes for flags
+        const countryToIsoCode = {
+            "United States": "us",
+            "United Kingdom": "gb",
+            "Australia": "au",
+            "India": "in",
+            "Canada": "ca",
+            "Japan": "jp",
+            "Global (EU)": "eu"
+        };
+
+        // Global emergency numbers by country
+        const globalEmergencyNumbers = [
+            { country: "Global (EU)", number: "112", description: "General emergency number across the European Union", link: "https://ec.europa.eu/info/general-emergency-number-112_en" },
+            { country: "United States", number: "911", description: "Emergency services for police, fire, and medical", link: "https://www.911.gov" },
+            { country: "United Kingdom", number: "999", description: "Emergency services for police, fire, and ambulance", link: "https://www.gov.uk/emergency-services" },
+            { country: "Australia", number: "000", description: "Emergency services for police, fire, and ambulance", link: "https://www.triplezero.gov.au" },
+            { country: "India", number: "112", description: "Unified emergency response number", link: "https://www.india.gov.in/emergency-numbers" },
+            { country: "Canada", number: "911", description: "Emergency services for police, fire, and medical", link: "https://www.canada.ca/en/services/policing/emergencies.html" },
+            { country: "Japan", number: "119", description: "Emergency services for fire and ambulance", link: "https://www.japan-guide.com/e/e2022.html" },
+            { country: "Global Crisis Hotline", number: "Varies", description: "Find local crisis hotlines via Befrienders Worldwide", link: "https://befrienders.org" }
+        ];
+
+        // Map Google Place Types to Font Awesome icons and display names
+        const serviceCategoryMap = {
+            // Google Places API types (often multiple per category). Keys are the 'type' attribute from Google Places.
+            hospital: { icon: 'fas fa-hospital', className: 'hospital', displayName: 'Hospital' },
+            fire_station: { icon: 'fas fa-fire-extinguisher', className: 'fire_station', displayName: 'Fire Department' },
+            police: { icon: 'fas fa-handcuffs', className: 'police', displayName: 'Police Station' },
+            pharmacy: { icon: 'fas fa-pills', className: 'pharmacy', displayName: 'Pharmacy' },
+            veterinary_care: { icon: 'fas fa-paw', className: 'veterinary_clinic', displayName: 'Veterinary Clinic' }, // Google uses veterinary_care
+            lodging: { icon: 'fas fa-home', className: 'shelter', displayName: 'Shelter' }, // General fallback for shelter
+            community_center: { icon: 'fas fa-hand-holding-heart', className: 'community_center', displayName: 'Community Support' },
+            // Custom type for hotlines (not a standard Google Place Type, handled via static data)
+            crisis_hotline: { icon: 'fas fa-headset', className: 'crisis_hotline', displayName: 'Crisis Hotline' },
+            // Fallback for types not explicitly mapped
+            default: { icon: 'fas fa-info-circle', className: 'unknown', displayName: 'Service' }
+        };
+
+
+        // Cache for API results
+        const cache = new Map();
+        let currentServices = [];
+        let lastKnownPosition = null; // Store user's last known coordinates {latitude, longitude}
+
+        // --- Utility Functions ---
+
+        function sanitizeInput(input) {
+            const div = document.createElement('div');
+            div.textContent = input;
+            return div.innerHTML;
+        }
+
+        function getFlagHtml(countryName, isQuickLink = false) {
+            const isoCode = countryToIsoCode[countryName];
+            if (isoCode) {
+                const size = isQuickLink ? 'w20' : 'w40';
+                return `<img src="https://flagcdn.com/${size}/${isoCode.toLowerCase()}.png" class="country-flag" alt="Flag of ${countryName}">`;
+            } else if (countryName === "Global Crisis Hotline") {
+                return '<i class="fas fa-globe country-flag globe-icon"></i>';
+            }
+            return '';
+        }
+
+        function calculateDistance(lat1, lon1, lat2, lon2) {
+            const R = 6371;
+            const dLat = (lat2 - lat1) * Math.PI / 180;
+            const dLon = (lon2 - lon1) * Math.PI / 180;
+            const a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+                      Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+                      Math.sin(dLon / 2) * Math.sin(dLon / 2);
+            const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+            return R * c;
+        }
+
+        // Helper to get icon/display name/CSS class from Google Places types
+        function getServiceCategoryInfo(placeTypes) {
+            if (!placeTypes || !Array.isArray(placeTypes)) {
+                return serviceCategoryMap.default;
+            }
+            // Prioritize specific emergency types first (based on our defined list)
+            for (const key of ['hospital', 'fire_station', 'police', 'pharmacy', 'veterinary_care', 'shelter', 'community_center', 'crisis_hotline']) {
+                if (placeTypes.includes(key) && serviceCategoryMap[key]) {
+                    return serviceCategoryMap[key];
+                }
+            }
+            // Fallback to general types if none of the specific emergency types match from Google's broader types
+            for (const type of placeTypes) {
+                if (serviceCategoryMap[type]) {
+                    return serviceCategoryMap[type];
+                }
+            }
+            return serviceCategoryMap.default;
+        }
+
+
+        // --- Page Content Loaders ---
+
+        function loadEmergencyNumbers() {
+            const grid = document.getElementById('emergency-numbers-grid');
+            grid.innerHTML = '';
+            globalEmergencyNumbers.forEach(num => {
+                const card = document.createElement('div');
+                card.className = 'emergency-number-card';
+                const flagHtml = getFlagHtml(num.country, false);
+                card.innerHTML = `
+                    <h4>${flagHtml} ${sanitizeInput(num.country)}</h4>
+                    <p><strong>${sanitizeInput(num.number)}</strong>: ${sanitizeInput(num.description)}</p>
+                    <a href="${sanitizeInput(num.link)}" target="_blank" class="category-link" aria-label="Learn more about ${num.country} emergency services">Learn More <i class="fas fa-external-link-alt"></i></a>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        async function loadDynamicEmergencyLinks(position = null) {
+            const linksContainer = document.getElementById('dynamic-emergency-links');
+            let country = 'Global';
+
+            if (position) {
+                try {
+                    // Use Google Geolocation API for more precise country detection if API key is available
+                    if (Maps_API_KEY && Maps_API_KEY !== "YOUR_Maps_API_KEY") {
+                        const geoApiUrl = `https://www.googleapis.com/geolocation/v1/geolocate?key=${Maps_API_KEY}`;
+                        const geoApiResponse = await fetch(geoApiUrl, {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({ considerIp: true })
+                        });
+                        const geoApiData = await geoApiResponse.json();
+                        if (geoApiData && geoApiData.location) {
+                            const reverseGeoResponse = await fetch(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${geoApiData.location.lat},${geoApiData.location.lng}&key=${Maps_API_KEY}`);
+                            const reverseGeoData = await reverseGeoResponse.json();
+                            if (reverseGeoData.results && reverseGeoData.results.length > 0) {
+                                const countryComponent = reverseGeoData.results[0].address_components.find(comp => comp.types.includes('country'));
+                                country = countryComponent ? countryComponent.long_name : 'Global';
+                            }
+                        }
+                    } else { // Fallback to Nominatim if no Google API Key
+                        const response = await fetch(`https://nominatim.openstreetmap.org/reverse?lat=${position.coords.latitude}&lon=${position.coords.longitude}&format=json&zoom=3`, {
+                            headers: { 'User-Agent': 'GlobalEmergencyFinder/1.0 (https://yourwebsite.com)' }
+                        });
+                        if (!response.ok) throw new Error('Nominatim Geocoding failed');
+                        const data = await response.json();
+                        country = data.address?.country || 'Global';
+                    }
+                } catch (error) {
+                    console.error('Error fetching country for dynamic links:', error);
+                    country = 'Global';
+                }
+            }
+
+            linksContainer.innerHTML = '';
+            const relevantNumbers = globalEmergencyNumbers.filter(num => num.country === country);
+            const globalGenericNumbers = globalEmergencyNumbers.filter(num => num.country.includes('Global') && num.country !== country);
+            const numbersToDisplay = [...new Set([...relevantNumbers, ...globalGenericNumbers])];
+
+            numbersToDisplay.forEach(num => {
+                const link = document.createElement('a');
+                link.href = num.number === 'Varies' ? num.link : `tel:${num.number}`;
+                link.className = 'emergency-link';
+                const flagHtml = getFlagHtml(num.country, true);
+                link.innerHTML = `
+                    ${flagHtml || `<i class="fas ${num.number === 'Varies' ? 'fa-globe' : 'fa-phone-alt'}"></i>`}
+                    ${num.country === 'Global Crisis Hotline' ? 'Find Crisis Hotline' : `${sanitizeInput(num.country)}: ${sanitizeInput(num.number)}`}
+                `;
+                link.setAttribute('aria-label', `Call ${num.country} emergency number ${num.number}`);
+                linksContainer.appendChild(link);
+            });
+        }
+
+        // --- Search Functionality (Now uses Google Places API) ---
+
+        /**
+         * Main function to search for emergency services using Google Places API.
+         * @param {object|null} searchCoords - Optional: {latitude, longitude} if search is based on direct geolocation.
+         */
+        async function searchServices(searchCoords = null) {
+            if (!Maps_API_KEY || Maps_API_KEY === "YOUR_Maps_API_KEY") {
+                displayError("Google Maps API Key is missing or invalid. Please configure it in script.js for search functionality.");
+                return;
+            }
+
+            const searchInputEl = document.getElementById('search-input');
+            const categoryFilterEl = document.getElementById('category-filter');
+            let originalPlaceholder = searchInputEl.placeholder;
+            searchInputEl.placeholder = 'Searching...';
+
+            const searchInput = sanitizeInput(searchInputEl.value.toLowerCase().trim());
+            const categoryFilter = categoryFilterEl.value;
+            const resultsListContainer = document.getElementById('results-list');
+            const resultsCountEl = document.getElementById('results-count');
+
+            // Mapping dropdown values to Google Places API types for search queries
+            const placeTypeQueryMap = {
+                hospital: 'hospital',
+                fire_station: 'fire_station',
+                police: 'police',
+                pharmacy: 'pharmacy',
+                veterinary_care: 'veterinary_care',
+                shelter: 'lodging', // No direct 'shelter' type, lodging is a general fallback
+                community_center: 'community_center',
+                crisis_hotline: 'counseling_center', // Closest Google Places type for crisis hotlines
+                all: '' // For 'all', we'll use a broad text search or multiple specific types
+            };
+
+            resultsListContainer.innerHTML = `<div class="loading-spinner"></div>`;
+            resultsCountEl.textContent = `Searching...`;
+
+            let queryLat = null;
+            let queryLon = null;
+            let locationName = searchInput;
+            let queryText = searchInput; // The text to send to Google Places Text Search
+
+            try {
+                // 1. Determine location (coordinates) for the search
+                if (searchCoords) {
+                    queryLat = searchCoords.latitude;
+                    queryLon = searchCoords.longitude;
+                    lastKnownPosition = searchCoords;
+                    const geoResponse = await fetch(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${queryLat},${queryLon}&key=${Maps_API_KEY}`);
+                    const geoData = await geoResponse.json();
+                    if (geoData.results && geoData.results.length > 0) {
+                        locationName = geoData.results[0].address_components.find(comp => comp.types.includes('locality'))?.long_name ||
+                                       geoData.results[0].address_components.find(comp => comp.types.includes('administrative_area_level_1'))?.long_name ||
+                                       geoData.results[0].address_components.find(comp => comp.types.includes('country'))?.long_name ||
+                                       'Your current location';
+                        searchInputEl.value = `Near ${locationName}`;
+                    } else {
+                        locationName = 'Your current location';
+                        searchInputEl.value = 'Near Me';
+                    }
+                    loadDynamicEmergencyLinks({ coords: { latitude: queryLat, longitude: queryLon } });
+                } else if (searchInput.includes('near me') && navigator.geolocation) {
+                    resultsCountEl.textContent = `Getting your precise location...`;
+                    const position = await new Promise((resolve, reject) => {
+                        navigator.geolocation.getCurrentPosition(resolve, reject, { enableHighAccuracy: true, timeout: 10000, maximumAge: 0 });
+                    });
+                    queryLat = position.coords.latitude;
+                    queryLon = position.coords.longitude;
+                    lastKnownPosition = { latitude: queryLat, longitude: queryLon };
+                    const geoResponse = await fetch(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${queryLat},${queryLon}&key=${Maps_API_KEY}`);
+                    const geoData = await geoResponse.json();
+                    if (geoData.results && geoData.results.length > 0) {
+                        locationName = geoData.results[0].address_components.find(comp => comp.types.includes('locality'))?.long_name ||
+                                       geoData.results[0].address_components.find(comp => comp.types.includes('administrative_area_level_1'))?.long_name ||
+                                       geoData.results[0].address_components.find(comp => comp.types.includes('country'))?.long_name ||
+                                       'Your current location';
+                        searchInputEl.value = `Near ${locationName}`;
+                    } else {
+                         locationName = 'Your current location';
+                         searchInputEl.value = 'Near Me';
+                    }
+                    loadDynamicEmergencyLinks(position);
+                } else if (searchInput) {
+                    resultsCountEl.textContent = `Searching for "${searchInput}"...`;
+                    const geoResponse = await fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(searchInput)}&key=${Maps_API_KEY}`);
+                    const geoData = await geoResponse.json();
+                    if (geoData.results && geoData.results.length > 0 && geoData.results[0].geometry) {
+                        queryLat = geoData.results[0].geometry.location.lat;
+                        queryLon = geoData.results[0].geometry.location.lng;
+                        locationName = geoData.results[0].formatted_address;
+                        lastKnownPosition = { latitude: queryLat, longitude: queryLon };
+                    } else {
+                        displayError(`Could not find a valid location for "${searchInput}". Please try a different query.`);
+                        searchInputEl.placeholder = originalPlaceholder;
+                        return;
+                    }
+                } else {
+                    displayError('Please enter a location (e.g., "London", "hospital in Paris") or use "Near Me" to find services.');
+                    resultsCountEl.textContent = 'Awaiting search input...';
+                    searchInputEl.placeholder = originalPlaceholder;
+                    return;
+                }
+
+                const cacheKey = `${queryLat},${queryLon}_${categoryFilter}_${queryText}`;
+                if (cache.has(cacheKey)) {
+                    currentServices = cache.get(cacheKey);
+                    displayResults(currentServices, resultsListContainer, resultsCountEl, locationName);
+                    searchInputEl.placeholder = originalPlaceholder;
+                    return;
+                }
+
+                // 2. Perform Google Places Search
+                let placesApiUrl = `https://maps.googleapis.com/maps/api/place/nearbysearch/json?key=${Maps_API_KEY}`;
+                let queryParams = `location=${queryLat},${queryLon}&radius=10000`; // Search within 10km radius
+
+                let googlePlacesType = '';
+                if (categoryFilter && categoryFilter !== 'all' && placeTypeQueryMap[categoryFilter]) {
+                    googlePlacesType = placeTypeQueryMap[categoryFilter];
+                    queryParams += `&type=${googlePlacesType}`;
+                } else if (queryText && queryText !== 'near me') {
+                    placesApiUrl = `https://maps.googleapis.com/maps/api/place/textsearch/json?key=${Maps_API_KEY}`;
+                    queryParams = `query=${encodeURIComponent(queryText + ' emergency service')}&location=${queryLat},${queryLon}&radius=10000`;
+                } else {
+                     queryParams += `&type=hospital|fire_station|police|pharmacy|veterinary_care|lodging|community_center|counseling_center`;
+                }
+                
+                const placesResponse = await fetch(`${placesApiUrl}&${queryParams}`);
+                const placesData = await placesResponse.json();
+
+                if (placesData.status !== 'OK' && placesData.status !== 'ZERO_RESULTS') {
+                    throw new Error(`Google Places API error: ${placesData.status} - ${placesData.error_message || 'Unknown error'}`);
+                }
+
+                let services = placesData.results.map(place => {
+                    const categoryInfo = getServiceCategoryInfo(place.types);
+                    const photoReference = place.photos && place.photos.length > 0 ? place.photos[0].photo_reference : null;
+                    const photoUrl = photoReference ? `https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${photoReference}&key=${Maps_API_KEY}` : null;
+                    
+                    const formattedAddress = place.formatted_address || place.vicinity || 'Address not available';
+                    const phone = place.international_phone_number || place.formatted_phone_number || 'N/A';
+                    const website = place.website || '';
+                    
+                    let hoursText = 'Hours not available';
+                    if (place.opening_hours) {
+                        if (place.opening_hours.open_now) {
+                            hoursText = 'Open Now';
+                        } else if (place.opening_hours.weekday_text) {
+                            hoursText = place.opening_hours.weekday_text.join('; ');
+                        }
+                    }
+
+                    return {
+                        id: place.place_id,
+                        name: place.name,
+                        category: categoryInfo.className,
+                        location: formattedAddress,
+                        phone: phone,
+                        website: website,
+                        hours: hoursText,
+                        description: place.editorial_summary?.overview || `A local ${categoryInfo.displayName} service.`,
+                        lat: place.geometry.location.lat,
+                        lon: place.geometry.location.lng,
+                        photoUrl: photoUrl,
+                        googlePlaceId: place.place_id
+                    };
+                });
+
+                if (categoryFilter === 'crisis_hotline' || categoryFilter === 'all') {
+                    const hotlineServices = globalEmergencyNumbers
+                        .filter(num => num.description.includes('crisis') || num.description.includes('hotline'))
+                        .map((num, index) => ({
+                            id: `static-hotline-${index}`,
+                            name: num.description,
+                            category: 'crisis_hotline',
+                            location: num.country,
+                            phone: num.number,
+                            website: num.link,
+                            distance: '',
+                            hours: '24/7',
+                            description: `A ${num.country} crisis hotline. Please check the 'Learn More' link for specific numbers if 'Varies'.`,
+                            lat: null,
+                            lon: null,
+                            learnMoreLink: num.link,
+                            photoUrl: null
+                        }));
+                    services.push(...hotlineServices);
+                }
+
+                currentServices = services;
+                cache.set(cacheKey, services);
+
+                displayResults(services, resultsListContainer, resultsCountEl, locationName);
+                searchInputEl.placeholder = originalPlaceholder;
+
+            } catch (error) {
+                console.error('Error fetching services:', error);
+                searchInputEl.placeholder = originalPlaceholder;
+                let errorMessage = `Failed to load services. ${error.message}.`;
+                if (error.name === 'TypeError' && error.message === 'Failed to fetch') {
+                    errorMessage = "Connection issue: Failed to reach Google Maps services. Check your internet connection, API key referrers in Google Cloud Console, or temporary disable browser extensions (e.g., ad blockers).";
+                } else if (error.code === GeolocationPositionError.PERMISSION_DENIED) {
+                    errorMessage = "Geolocation access denied. Please enable location services in your browser settings or enter a location manually.";
+                } else if (error.code === GeolocationPositionError.TIMEOUT) {
+                    errorMessage = "Location request timed out. Your location could not be determined. Please try again or enter a location manually.";
+                } else if (error.code === GeolocationPositionError.POSITION_UNAVAILABLE) {
+                    errorMessage = "Location information is unavailable. Please try again or enter a location manually.";
+                }
+                displayError(`${errorMessage} Check our <a href="emergency_numbers.html" style="color: var(--primary); font-weight: 600;">Global Emergency Numbers</a> for general help.`);
+            }
+        }
+
+        // Display search results
+        function displayResults(services, resultsListContainer, resultsCountEl, locationName) {
+            resultsListContainer.innerHTML = '';
+            resultsCountEl.textContent = `${services.length} services found for "${locationName}"`;
+
+            if (services.length === 0) {
+                resultsListContainer.innerHTML = `
+                    <div class="no-results-message">
+                        <p>No services found matching your search. Try a different location or service type.</p>
+                        <p>For immediate help, check our <a href="emergency_numbers.html" style="color: var(--primary); font-weight: 600;">Global Emergency Numbers</a> or try our <a href="#categories" style="color: var(--primary); font-weight: 600;">service categories</a>.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            services.forEach(service => {
+                const resultItem = document.createElement('div');
+                resultItem.className = 'result-item';
+                resultItem.onclick = () => showServiceDetails(service.id);
+                resultItem.setAttribute('tabindex', '0');
+                resultItem.setAttribute('role', 'button');
+                resultItem.setAttribute('aria-label', `View details for ${service.name}`);
+
+                const categoryInfo = getServiceCategoryInfo([service.category]); // Pass as array to reuse helper
+                const iconClass = categoryInfo.icon;
+
+                resultItem.innerHTML = `
+                    <h3><i class="${iconClass} service-icon"></i>${sanitizeInput(service.name)}</h3>
+                    <div class="result-meta">
+                        <span class="result-category ${service.category}">
+                            ${sanitizeInput(categoryInfo.displayName)}
+                        </span>
+                        <span class="result-location">
+                            <i class="fas fa-map-marker-alt"></i> ${sanitizeInput(service.location)}
+                        </span>
+                        <span><i class="fas fa-phone-alt"></i> Phone: ${sanitizeInput(service.phone)}</span>
+                        ${service.distance ? `<span><i class="fas fa-route"></i> ${sanitizeInput(service.distance)}</span>` : ''}
+                        <span><i class="far fa-clock"></i> ${sanitizeInput(service.hours)}</span>
+                    </div>
+                    <p>${sanitizeInput(service.description)}</p>
+                `;
+                resultsListContainer.appendChild(resultItem);
+            });
+        }
+
+        function displayError(message) {
+            const resultsListContainer = document.getElementById('results-list');
+            const resultsCountEl = document.getElementById('results-count');
+            resultsListContainer.innerHTML = `
+                <div class="no-results-message" style="color: var(--danger); border-color: var(--danger);">
+                    <p><i class="fas fa-exclamation-triangle"></i> ${message}</p>
+                </div>
+            `;
+            resultsCountEl.textContent = `Error occurred`;
+        }
+
+        function filterCategory(category) {
+            document.getElementById('category-filter').value = category;
+            searchServices();
+            window.scrollTo({ top: document.getElementById('search-section').offsetTop - 100, behavior: 'smooth' });
+        }
+
+        function getLocation() {
+            const searchInputEl = document.getElementById('search-input');
+            searchInputEl.value = 'Locating...';
+
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(
+                    (position) => {
+                        searchServices({ latitude: position.coords.latitude, longitude: position.coords.longitude });
+                    },
+                    (error) => {
+                        console.error('Error getting location:', error);
+                        searchInputEl.value = '';
+                        let errorMessage = "Unable to determine your precise location.";
+                        if (error.code === GeolocationPositionError.PERMISSION_DENIED) {
+                            errorMessage = "Location access denied. Please enable it in browser settings.";
+                        } else if (error.code === GeolocationPositionError.TIMEOUT) {
+                            errorMessage = "Location request timed out. Your location could not be determined. Please try again or enter a location manually.";
+                        }
+                        alert(`${errorMessage} Please enter your city or country manually.`);
+                        displayError(`Geolocation failed. ${errorMessage}`);
+                    },
+                    { enableHighAccuracy: true, timeout: 10000, maximumAge: 0 }
+                );
+            } else {
+                alert('Geolocation is not supported by this browser. Please enter your location manually.');
+                searchInputEl.value = '';
+                displayError('Geolocation not supported by your browser.');
+            }
+        }
+
+        // --- Service Details Modal Functions ---
+
+        function showServiceDetails(id) {
+            const service = currentServices.find(s => s.id === id);
+            if (!service) {
+                alert('Service details not available.');
+                return;
+            }
+
+            const modal = document.getElementById('service-details-modal');
+            const categoryInfo = getServiceCategoryInfo([service.category]);
+            const iconClass = categoryInfo.icon;
+
+            document.getElementById('modal-service-name').innerHTML = `<i class="${iconClass} service-icon"></i>${sanitizeInput(service.name)}`;
+            document.getElementById('modal-service-category').textContent = sanitizeInput(categoryInfo.displayName);
+            document.getElementById('modal-service-category').className = `result-category ${service.category}`;
+            document.getElementById('modal-service-location').innerHTML = `<i class="fas fa-map-marker-alt"></i> ${sanitizeInput(service.location)}`;
+            document.getElementById('modal-service-phone').innerHTML = `<i class="fas fa-phone-alt"></i> ${sanitizeInput(service.phone)}`;
+            document.getElementById('modal-service-hours').innerHTML = `<i class="far fa-clock"></i> ${sanitizeInput(service.hours)}`;
+            document.getElementById('modal-service-description').textContent = sanitizeInput(service.description);
+
+            const websiteSpan = document.getElementById('modal-service-website');
+            const websiteLink = websiteSpan.querySelector('a');
+            if (service.website && service.website !== 'N/A') {
+                let displayUrl = service.website;
+                if (!displayUrl.startsWith('http://') && !displayUrl.startsWith('https://')) {
+                    displayUrl = 'http://' + displayUrl;
+                }
+                websiteLink.href = displayUrl;
+                try {
+                    websiteLink.textContent = new URL(displayUrl).hostname;
+                } catch (e) {
+                    websiteLink.textContent = service.website;
+                }
+                websiteSpan.style.display = 'flex';
+            } else {
+                websiteSpan.style.display = 'none';
+            }
+
+            // Handle photo display in modal
+            const modalPhotoSpan = document.getElementById('modal-service-photo');
+            const modalPhotoImg = modalPhotoSpan.querySelector('img');
+            if (service.photoUrl) {
+                modalPhotoImg.src = service.photoUrl;
+                modalPhotoSpan.style.display = 'block';
+                modalPhotoImg.onload = () => modalPhotoSpan.classList.remove('loading');
+                modalPhotoImg.onerror = () => {
+                    modalPhotoSpan.style.display = 'none';
+                    console.error("Failed to load image:", service.photoUrl);
+                };
+                modalPhotoSpan.classList.add('loading'); // Show loading state for image
+            } else {
+                modalPhotoSpan.style.display = 'none';
+                modalPhotoImg.src = '';
+            }
+
+
+            document.getElementById('modal-call-button').href = `tel:${sanitizeInput(service.phone)}`;
+
+            const directionsButton = document.getElementById('modal-directions-button');
+            if (service.lat && service.lon && lastKnownPosition) {
+                // Corrected Google Maps Directions URL
+                directionsButton.href = `https://www.google.com/maps/dir/?api=1&origin=${lastKnownPosition.latitude},${lastKnownPosition.longitude}&destination=${service.lat},${service.lon}&travelmode=driving`;
+                directionsButton.style.display = 'flex';
+            } else if (service.lat && service.lon) {
+                // Corrected Google Maps Search URL if only destination is known
+                directionsButton.href = `https://www.google.com/maps/search/?api=1&query=${service.lat},${service.lon}`;
+                directionsButton.style.display = 'flex';
+            }
+            else {
+                directionsButton.style.display = 'none';
+            }
+
+            const hotlineLink = document.getElementById('modal-hotline-link');
+            if (service.category === 'crisis_hotline' && service.learnMoreLink) {
+                hotlineLink.href = service.learnMoreLink;
+                hotlineLink.style.display = 'flex';
+                document.getElementById('modal-call-button').textContent = 'Visit Page';
+                document.getElementById('modal-call-button').href = service.learnMoreLink;
+            } else {
+                hotlineLink.style.display = 'none';
+                document.getElementById('modal-call-button').textContent = 'Call';
+            }
+
+            modal.classList.add('active');
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('service-details-modal');
+            modal.classList.remove('active');
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('service-details-modal');
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+
+        // --- EMERGENCY SOS BUTTON LOGIC ---
+        async function triggerEmergencySOS() {
+            const userConfirmed = confirm("Are you sure you want to trigger an emergency SOS? This will attempt to call your local emergency number and open directions to the nearest hospital.");
+
+            if (!userConfirmed) {
+                return;
+            }
+
+            let userLat = null;
+            let userLon = null;
+            let userCountry = 'Unknown';
+            let emergencyNumber = '112';
+
+            try {
+                if (!Maps_API_KEY || Maps_API_KEY === "YOUR_Maps_API_KEY") { // Still check for the placeholder
+                    throw new Error("Google Maps API Key is missing for premium geolocation and places search. Falling back to browser's geolocation.");
+                }
+
+                // Try Google Geolocation API first for higher accuracy
+                try {
+                    const geoApiUrl = `https://www.googleapis.com/geolocation/v1/geolocate?key=${Maps_API_KEY}`;
+                    const geoApiResponse = await fetch(geoApiUrl, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ considerIp: true })
+                    });
+                    const geoApiData = await geoApiResponse.json();
+                    if (geoApiData && geoApiData.location) {
+                        userLat = geoApiData.location.lat;
+                        userLon = geoApiData.location.lng;
+                    } else {
+                        throw new Error("Google Geolocation API did not return a location. Falling back to browser's geolocation.");
+                    }
+                } catch (apiError) {
+                    console.warn("Google Geolocation API failed, falling back to browser geolocation:", apiError);
+                    if (!navigator.geolocation) {
+                        throw new Error("Browser geolocation not supported.");
+                    }
+                    const position = await new Promise((resolve, reject) => {
+                        navigator.geolocation.getCurrentPosition(resolve, reject, { enableHighAccuracy: true, timeout: 15000, maximumAge: 0 });
+                    });
+                    userLat = position.coords.latitude;
+                    userLon = position.coords.longitude;
+                }
+
+                lastKnownPosition = { latitude: userLat, longitude: userLon };
+
+                // Reverse geocode to get country using Google Geocoding API
+                const reverseGeoResponse = await fetch(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${userLat},${userLon}&key=${Maps_API_KEY}`);
+                const reverseGeoData = await reverseGeoResponse.json();
+                if (reverseGeoData.results && reverseGeoData.results.length > 0) {
+                    const countryComponent = reverseGeoData.results[0].address_components.find(comp => comp.types.includes('country'));
+                    userCountry = countryComponent ? countryComponent.long_name : 'Unknown';
+                }
+
+                const countryEmergency = globalEmergencyNumbers.find(num => num.country === userCountry);
+                if (countryEmergency && countryEmergency.number !== 'Varies') {
+                    emergencyNumber = countryEmergency.number;
+                } else if (userCountry === 'United States' || userCountry === 'Canada') {
+                    emergencyNumber = '911';
+                } else {
+                    emergencyNumber = '112'; // Default to 112 for most of the world
+                }
+
+                window.location.href = `tel:${emergencyNumber}`;
+                alert(`Attempting to call emergency number: ${emergencyNumber} in ${userCountry}.`);
+
+                // Find nearest hospital using Google Places Nearby Search for directions
+                findNearestServiceAndRedirect(userLat, userLon, 'hospital');
+
+            } catch (error) {
+                console.error('SOS Function Error:', error);
+                let errorMessage = "Could not determine your location or a specific emergency number. Please dial your local emergency number directly.";
+                if (error.code === GeolocationPositionError.PERMISSION_DENIED) {
+                    errorMessage = "Location access denied for SOS. Please enable it in browser settings and try again, or dial directly.";
+                } else if (error.code === GeolocationPositionError.TIMEOUT) {
+                    errorMessage = "Location for SOS timed out. Please try again or dial directly.";
+                }
+                alert(`Emergency SOS failed: ${errorMessage} Defaulting to 112. Please be prepared to provide your location manually.`);
+                window.location.href = `tel:112`;
+            }
+        }
+
+        async function findNearestServiceAndRedirect(lat, lon, serviceType) {
+            if (!Maps_API_KEY || Maps_API_KEY === "YOUR_Maps_API_KEY") { // Still check for the placeholder
+                alert("Google Maps API Key is missing for directions. Please configure it in script.js.");
+                return;
+            }
+
+            try {
+                const placeType = serviceType === 'hospital' ? 'hospital' : 'point_of_interest';
+                const placesApiUrl = `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${lat},${lon}&radius=10000&type=${placeType}&key=${Maps_API_KEY}`;
+
+                const placesResponse = await fetch(placesApiUrl);
+                const placesData = await placesResponse.json();
+
+                if (placesData.status === 'OK' && placesData.results.length > 0) {
+                    const nearestService = placesData.results[0];
+
+                    // Corrected Google Maps Directions URL
+                    const directionsUrl = `https://www.google.com/maps/dir/?api=1&origin=${lat},${lon}&destination=${nearestService.geometry.location.lat},${nearestService.geometry.location.lng}&travelmode=driving`;
+                    window.open(directionsUrl, '_blank');
+                    alert(`Opening directions to nearest ${nearestService.name} on Google Maps.`);
+                } else {
+                    console.warn(`No ${serviceType} found near current location for directions.`);
+                    alert(`Could not find a nearby ${serviceType} to provide directions. Please refer to your call.`);
+                }
+            } catch (error) {
+                console.error(`Error finding nearest ${serviceType} for directions:`, error);
+                alert(`Failed to get directions to nearest ${serviceType}. Please use your mapping app manually.`);
+            }
+        }
+
+
+        // --- Initialization ---
+        document.addEventListener('DOMContentLoaded', () => {
+            loadEmergencyNumbers();
+            loadDynamicEmergencyLinks();
+
+            document.getElementById('results-list').innerHTML = `
+                <div class="no-results-message">
+                    <p>Enter a location (e.g., "London", "hospital in Paris") or use "Near Me" to find emergency services.</p>
+                </div>
+            `;
+            document.getElementById('results-count').textContent = 'Awaiting search input...';
+
+            try {
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            } catch (e) {
+                console.error('AdSense initialization failed:', e);
+            }
+
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const target = document.querySelector(targetId);
+                    if (target) {
+                        window.scrollTo({
+                            top: target.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            if (window.location.hash) {
+                const initialHashTarget = document.querySelector(window.location.hash);
+                if (initialHashTarget) {
+                    setTimeout(() => {
+                        window.scrollTo({
+                            top: initialHashTarget.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }, 100);
+                }
+            }
+
+            document.getElementById('search-input').addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    e.preventDefault();
+                    searchServices();
+                }
+            });
+            document.getElementById('category-filter').addEventListener('change', () => {
+                searchServices();
+            });
+
+            document.querySelectorAll('.search-button, .location-button').forEach(button => {
+                button.addEventListener('keypress', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        button.click();
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
